@@ -181,3 +181,13 @@ body, #sentimiento {
   background-color: #fe7678;
 }
 
+/*
+  Ocultar clases
+*/
+.ocultar {
+  display: none;
+}
+
+.mostrar {
+  display: inline-block;
+}

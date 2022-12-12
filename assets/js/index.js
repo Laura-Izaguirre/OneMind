@@ -8,6 +8,9 @@ const seccionPrincipal = document.getElementById("contenido-1");
 
 const contenedorBotones = document.getElementById("contenedor-btns");
 
+const comillaAmarilla = document.getElementById("comilla-amarilla");
+const comillaBlanca = document.getElementById("comilla-blanca");
+
 // Inputs de la forma
 const sentimiento = document.getElementById("sentimiento");
 
@@ -30,23 +33,31 @@ main.addEventListener("click", (e) => {
       "enojado-s",
       "color-blanco"
     );
+
+    
     seccionPrincipal.classList.add("feliz-s", "cuadro");
     sentimiento.classList.add("color-naranja");
     sentimiento.classList.remove("color-blanco");
     
+    comillaBlanca.classList.add("ocultar");
+    comillaAmarilla.classList.remove("ocultar");
+    
     //Llamar función para agregar texto
     insertarEstadoDeAnimo("Feliz");
   }
-  
+
   if (e.target.classList.contains("triste-btn")) {
     body.removeAttribute("class");
     body.classList.add("triste");
-    
+
     seccionPrincipal.classList.remove("feliz-s", "tranquilo-s", "enojado-s");
     seccionPrincipal.classList.add("triste-s", "cuadro");
-    
+
     sentimiento.classList.add("color-blanco");
     sentimiento.classList.remove("color-naranja");
+
+    comillaBlanca.classList.remove("ocultar");
+    comillaAmarilla.classList.add("ocultar");
     
     //Llamar función para agregar texto
     insertarEstadoDeAnimo("Triste");
@@ -60,6 +71,9 @@ main.addEventListener("click", (e) => {
     
     sentimiento.classList.add("color-blanco");
     sentimiento.classList.remove("color-naranja");
+
+    comillaBlanca.classList.remove("ocultar");
+    comillaAmarilla.classList.add("ocultar");
     
     //Llamar función para agregar texto
     insertarEstadoDeAnimo("Tranquilo");
@@ -74,7 +88,10 @@ main.addEventListener("click", (e) => {
     
     sentimiento.classList.add("color-blanco");
     sentimiento.classList.remove("color-naranja");
-
+    
+    comillaBlanca.classList.remove("ocultar");
+    comillaAmarilla.classList.add("ocultar");
+    
     //Llamar función para agregar texto
     insertarEstadoDeAnimo("Enojado");
   }
@@ -83,4 +100,11 @@ main.addEventListener("click", (e) => {
 function insertarEstadoDeAnimo(animo) {
   const texto = document.getElementById("estado-animo");
   texto.textContent = animo;
+}
+
+function Comillas() {
+  let cambiarComillas = document.createElement("div");
+  cambiarComillas.innerHTML = `
+  <img src="./assets/Images/comilla-blanca.png" alt="comilla-blanca">
+  `;
 }
