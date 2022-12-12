@@ -1,0 +1,38 @@
+/*
+  Colores de fondo del body
+*/
+
+.feliz {
+  background-color: #f99444;
+}
+
+.triste {
+  background-color: #26243c;
+}
+
+.tranquilo {
+  background-color: #8ef5f4;
+}
+
+.enojado {
+  background-color: #cc2320;
+}
+
+/* Colores de fondo de la seccion*/
+
+.feliz-s {
+    background-color: #ffff01;
+}
+
+.triste-s {
+    background-color: #141265;
+}
+  
+.tranquilo-s {
+  background-color: #59b7b6;
+}
+
+.enojado-s {
+  background-color: #fe7678;
+}
+
