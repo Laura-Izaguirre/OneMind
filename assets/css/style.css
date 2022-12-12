@@ -1,21 +1,166 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body, #sentimiento {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.body-inicio {
+  background: linear-gradient(to bottom, #f0fef8, #7dfec6);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+#padding-logo {
+  padding-left: 1rem;
+}
+
+#padding-hamburguesa {
+  padding-right: 1rem;
+}
+
+.principal,
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#titulo-principal {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+}
+
+
+.cuadro {
+  width: 70vw;
+  height: 30vh;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+}
+
+.contenido {
+  background-color: #4bdecb;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+.separacion {
+  color: rgb(251, 237, 237);
+  height: 30vh;
+}
+
+#sentimiento {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+#sentimiento:focus {
+  outline: none;
+}
+
+.contenedor-sentimiento {
+  padding: 0 0.2rem;
+}
+
+
+.button {
+  border: none;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: transparent;
+
+}
+
+.img {
+  width: 2rem;
+  border-radius: 50%;
+}
+
+.opacity {
+  background-color: rgba(128, 128, 128, 0.2);
+  color: white;
+}
+
+
+.color-blanco {
+  color: white;
+}
+
+.color-naranja {
+  color: #ff9f09;
+}
+
 /*
   Colores de fondo del body
 */
 
 .feliz {
-  background-color: #f99444;
+  background: linear-gradient(to bottom, #fef1e7, #f89446);
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .triste {
-  background-color: #26243c;
+  background: linear-gradient(to bottom, #e0dee5, #1a1933);
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .tranquilo {
-  background-color: #8ef5f4;
+  background: linear-gradient(to bottom, #92c1db, #4eb9d1);
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .enojado {
-  background-color: #cc2320;
+  background: linear-gradient(to bottom, #fae6e8, #cc1e1c);
+  background-repeat: no-repeat;
+  height: 100vh;
+
 }
 
 /* Colores de fondo de la seccion*/

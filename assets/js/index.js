@@ -6,30 +6,36 @@ const main = document.getElementById("main");
 const form = document.getElementById("form");
 const seccionPrincipal = document.getElementById("contenido-1");
 
-
 const contenedorBotones = document.getElementById("contenedor-btns");
 
 // Inputs de la forma
 const sentimiento = document.getElementById("sentimiento");
 
 // Crear un escuchador de eventos para la forma
-form.addEventListener('submit', (e) => {
+form.addEventListener("submit", (e) => {
   // Evitar accion por defecto de la forma
   e.preventDefault();
 });
 
 // Crear un evento global
-main.addEventListener('click', (e) => {
+main.addEventListener("click", (e) => {
   if (e.target.classList.contains("feliz-btn")) {
     // Agregar clases a body
     body.removeAttribute("class");
     body.classList.add("feliz");
 
-    seccionPrincipal.classList.remove("triste-s", "tranquilo-s", "enojado-s");
+    seccionPrincipal.classList.remove(
+      "triste-s",
+      "tranquilo-s",
+      "enojado-s",
+      "color-blanco"
+    );
     seccionPrincipal.classList.add("feliz-s", "cuadro");
-
-    //Llamar función para agregar texto 
-    insertarEstadoDeAnimo('Feliz');
+    sentimiento.classList.add("color-naranja");
+    sentimiento.classList.remove("color-blanco");
+    
+    //Llamar función para agregar texto
+    insertarEstadoDeAnimo("Feliz");
   }
   
   if (e.target.classList.contains("triste-btn")) {
@@ -38,20 +44,25 @@ main.addEventListener('click', (e) => {
     
     seccionPrincipal.classList.remove("feliz-s", "tranquilo-s", "enojado-s");
     seccionPrincipal.classList.add("triste-s", "cuadro");
-
-    //Llamar función para agregar texto 
-    insertarEstadoDeAnimo('Triste');
+    
+    sentimiento.classList.add("color-blanco");
+    sentimiento.classList.remove("color-naranja");
+    
+    //Llamar función para agregar texto
+    insertarEstadoDeAnimo("Triste");
   }
   
   if (e.target.classList.contains("tranquilo-btn")) {
     body.removeAttribute("class");
     body.classList.add("tranquilo");
     seccionPrincipal.classList.remove("feliz-s", "triste-s", "enojado-s");
-    seccionPrincipal.classList.add("tranquilo-s", "cuadro");
+    seccionPrincipal.classList.add("tranquilo-s", "cuadro", "color-blanco");
     
-    //Llamar función para agregar texto 
-    insertarEstadoDeAnimo('Tranquilo');
+    sentimiento.classList.add("color-blanco");
+    sentimiento.classList.remove("color-naranja");
     
+    //Llamar función para agregar texto
+    insertarEstadoDeAnimo("Tranquilo");
   }
   
   if (e.target.classList.contains("enojado-btn")) {
@@ -59,10 +70,13 @@ main.addEventListener('click', (e) => {
     body.classList.add("enojado");
     
     seccionPrincipal.classList.remove("feliz-s", "tranquilo-s", "triste-s");
-    seccionPrincipal.classList.add("enojado-s", "cuadro");
+    seccionPrincipal.classList.add("enojado-s", "cuadro", "color-blanco");
+    
+    sentimiento.classList.add("color-blanco");
+    sentimiento.classList.remove("color-naranja");
 
-    //Llamar función para agregar texto 
-    insertarEstadoDeAnimo('Enojado');
+    //Llamar función para agregar texto
+    insertarEstadoDeAnimo("Enojado");
   }
 });
 

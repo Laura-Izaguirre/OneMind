@@ -5,57 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>One Mind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css" />
+    
   </head>
   <body class="body-inicio">
     <header id="header">
-      <img
-        src="./assets/Images/silueta-de-usuario.png"
-        alt="silueta"
-        id="silueta"
-      />
-      <h2>OneMind</h2>
+      <div class="flex-row" id="padding-logo">
+        <img
+          src="./assets/Images/silueta-de-usuario.png"
+          alt="silueta"
+          id="silueta"
+        />
+        <h2>OneMind</h2>
+      </div>
+      <div id="padding-hamburguesa">
+        <img src="./assets/Images/hamburguesa.png" alt="menu-hamburguesa">
+      </div>
     </header>
     <main id="main">
-      <h1>¿Cómo te sientes hoy?</h1>
+      <h1 id="titulo-principal">¿Cómo te sientes hoy?</h1>
         <section id="contenido-1" class="contenido cuadro">
-          <img src="" alt="" />
+          <div id="img-comillas">
+            <img src="./assets/Images/comilla-blanca.png" alt="">
+          </div>
           <form action="" id="form">
             <input
               type="text"
               id="sentimiento"
               name="sentimiento"
+              class="color-blanco"
               placeholder="Cuéntame cómo te sientes"
             />
-            <section class="flex-row">
-              <label for="emoji"> Me siento... </label>
+            <section class="flex-row separacion">
+              <div>
+                  <label for="emoji" class="opacity"> Me siento... </label>
+              </div>
               <div class="flex-row contenedor-btns">
-                <button type="submit" class="feliz-btn button">
-                  <img
-                    src="./assets/Images/feliz.png"
-                    alt="emoji-feliz"
-                    class="feliz-btn img"
-                  />
-                </button>
-                <button type="submit" class="triste-btn button">
-                  <img
-                    src="./assets/Images/triste.png"
-                    alt="emoji-triste"
-                    class="triste-btn img"
-                  />
-                </button>
-                <button type="submit" class="tranquilo-btn button">
-                  <img
-                    src="./assets/Images/tranquilo.png"
-                    alt="emoji-tranquilo"
-                    class="tranquilo-btn img"
-                  />
-                </button>
-                <button type="submit" class="enojado-btn button">
-                  <img src="./assets/Images/enojado.png" alt="emoji-enojado" class="enojado-btn button" 
-                  />
-                </button>
-                <p id="estado-animo"></p>
+
+              <div class="contenedor-sentimiento">
+                  <button type="submit" class="feliz-btn button">
+                    <img
+                      src="./assets/Images/feliz.png"
+                      alt="emoji-feliz"
+                      class="feliz-btn img"
+                    />
+                  </button>
+                </div>
+
+                <div class="contenedor-sentimiento">
+                  <button type="submit" class="triste-btn button">
+                    <img
+                      src="./assets/Images/triste.png"
+                      alt="emoji-triste"
+                      class="triste-btn img"
+                    />
+                  </button>
+                </div>
+
+                <div class="contenedor-sentimiento">
+                  <button type="submit" class="tranquilo-btn button">
+                    <img
+                      src="./assets/Images/tranquilo.png"
+                      alt="emoji-tranquilo"
+                      class="tranquilo-btn img"
+                    />
+                  </button>
+                </div>
+
+                <div class="contenedor-sentimiento">
+                  <button type="submit" class="enojado-btn button">
+                    <img src="./assets/Images/enojado.png" alt="emoji-enojado" class="enojado-btn button" 
+                    />
+                  </button>
+                </div>
+              </div>
+              <div>
+                <p id="estado-animo" class="opacity"></p>
               </div>
             </section>
           </form>
