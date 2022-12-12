@@ -1,26 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>One Mind</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-  <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Mind</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body class="body-inicio">
+    <header id="header">
+      <img
+        src="./assets/Images/silueta-de-usuario.png"
+        alt="silueta"
+        id="silueta"
+      />
+      <h2>OneMind</h2>
+    </header>
+    <main id="main">
+      <h1>¿Cómo te sientes hoy?</h1>
+        <section id="contenido-1" class="contenido cuadro">
+          <img src="" alt="" />
+          <form action="" id="form">
+            <input
+              type="text"
+              id="sentimiento"
+              name="sentimiento"
+              placeholder="Cuéntame cómo te sientes"
+            />
+            <section class="flex-row">
+              <label for="emoji"> Me siento... </label>
+              <div class="flex-row">
+                <button type="submit" class="feliz-btn button">
+                  <img
+                    src="./assets/Images/feliz.png"
+                    alt="emoji-feliz"
+                    class="feliz-btn img"
+                  />
+                </button>
+                <button type="submit" class="triste-btn button">
+                  <img
+                    src="./assets/Images/triste.png"
+                    alt="emoji-triste"
+                    class="triste-btn img"
+                  />
+                </button>
+                <button type="submit" class="tranquilo-btn button">
+                  <img
+                    src="./assets/Images/tranquilo.png"
+                    alt="emoji-tranquilo"
+                    class="tranquilo-btn img"
+                  />
+                </button>
+                <button type="submit" class="enojado-btn button">
+                  <img src="./assets/Images/enojado.png" alt="emoji-enojado" class="enojado-btn button" 
+                  />
+                </button>
+              </div>
+            </section>
+          </form>
+        </section>
+    </main>
 
-  </header>
+    <footer id="footer"></footer>
 
-  <main>
-
-  </main>
-
-  <footer>
-
-  </footer>
-
-  <script src="./assets/js/index.js"></script>
-
-</body>
+    <script src="./assets/js/index.js" type="text/javascript"></script>
+  </body>
 </html>
